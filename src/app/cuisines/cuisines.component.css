@@ -1,0 +1,56 @@
+/* .example-button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .example-button-row button,
+  .example-button-row a {
+    margin-right: 8px;
+  } */
+  .par{
+    position: absolute;
+    top: 30px;
+    font-family: monospace;
+    left: 100px;
+    font-size: 41px;
+  }
+  .vg{
+    padding: 0px;
+    border: none;
+  }
+  .div1{
+    height: 197px;
+    width: 277px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ffffffa1; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    font-size: 40px;
+  }
+  .alig{
+    position:relative;
+    display: inline-block;
+    margin: 20px;
+    transition: transform .5s;
+  }
+
+
+.alig:hover {
+    -ms-transform: scale(1.15); /* IE 9 */
+    -webkit-transform: scale(1.15); /* Safari 3-8 */
+    transform: scale(1.10); 
+    backdrop-filter:blur(2px);
+}
+  .contain{
+    display: flex;
+    flex-wrap: wrap; /* Optional. only if you want the items to wrap */
+    justify-content: center; /* For horizontal alignment */
+    align-items: center; 
+  }
+  p{
+    background-color: #ffffffa1;
+  }

@@ -1,0 +1,54 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav  fxLayout="column" mode="side" opened="false"
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar style="background:#d65d0f">Menu</mat-toolbar>
+    <mat-nav-list fxLayout="column">
+      <a mat-list-item routerLink="/second-page">Main</a>
+      <a mat-list-item routerLink="/free-delivery">Free-delivery</a>
+      <a mat-list-item routerLink="/snacks">Snacks</a>
+      <a mat-list-item routerLink="/juices">Juices</a>
+      <a mat-list-item routerLink="/breakfast">Breakfast</a>
+      <a mat-list-item routerLink="/deserts">Deserts</a>
+      <a mat-list-item routerLink="/lunch">Lunch</a>
+      <a mat-list-item routerLink="/restaurant">Resturant</a>
+
+
+
+      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content >
+    <mat-toolbar style="background:#d65e0e">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+     
+      <div style="padding-left: 800px;font-size: 17px;color: white;font-family: serif;">
+          <span class=" spacing" routerLink="/favourite">
+            <mat-icon class="icon" >favorite</mat-icon>
+            <div class="badge" style="padding-left: 6px" *ngIf="favService.favList.length > 0" >{{favService.favList.length}}</div>
+
+        </span>
+        <span class=" spacing" routerLink="/login">
+            <mat-icon class="icon" >person</mat-icon>
+        </span>
+        <span class="spacing" routerLink="/cart">
+            <mat-icon class="icon">shopping_cart</mat-icon>
+            <div class="badge" style="padding-left: 6px" *ngIf="cartService.cartList.length > 0" >{{cartService.cartList.length}}</div>
+        </span>
+      </div>
+
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

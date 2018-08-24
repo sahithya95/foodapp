@@ -1,0 +1,23 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+.spacing{
+  padding: 19px;
+  display: inline-flex;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  outline: none;
+}
+.badge {
+   top: 0;
+ 
+  height: 16px;
+  background-color: #f3f1f1;
+  
+  color: #ef6f0e;;
+}
